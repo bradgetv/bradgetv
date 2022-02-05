@@ -10,6 +10,10 @@
   body p { margin-left: 0.5em}
 
 a {color: #47B4FF}
+
+video { 
+	width: 100% !important;
+	}
 	
 /* Navbar container */
 .navbar {
