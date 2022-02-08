@@ -56,16 +56,6 @@
     </div>	
 	</div>
 	
-	<div class="dropdown">
-    <button class="dropbtn"><img width="30px" src="img/weegschaal.jpg"/>
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div style="max-width: 8em; padding: 0.5em" class="dropdown-content">
-      Braddie weegt op dit moment:<br>
-	  <b style="padding-top: 1em; font-family:monospace; font-size: 20px">163 kg </p>7 zakken potgrond</b>
-    </div>	
-	</div>
-	
 	  <div class="dropdown">
     <button class="dropbtn"><img width="30px" src="img/braddie_lang_geleden.jpg"/>
       <i class="fa fa-caret-down"></i>
@@ -112,11 +102,35 @@
 Hier zal meer informatie komen over zijn nieuwe avonturen.</p>
 <p>Meer informatie is natuurlijk te vinden bij de KVK:
 <a href="https://www.kvk.nl/zoeken/?source=all&q=bradgetv" target="_blank">https://www.kvk.nl/zoeken/?source=all&q=bradgetv</a></p>	
+
+<h2>De weegschaal </h2><img width="50px" style="vertical-align:middle" src="img/weegschaal.jpg"/>
+    <button type="button"
+        onclick="show()" id="btnID">
+        Weeg Braddie
+    </button>
+ 
+    <script>
+        function show() {
+ 
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('gewicht')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+    </script>
+    <div id="gewicht" style="display:none; background: #93AFAC; padding: 1em; max-width:50%">
+	  <p><b style="padding-top: 1em; font-family:monospace; font-size: 30px">163 kg </br>7 zakken potgrond</b> <img src="img/potgrond.webp" style="max-width=2em"/></p>
+    </div>	
 	
 	
-<video style="width=100%" autoplay loop muted>
+<video style="width=100%; padding-top:1em" autoplay loop muted>
   <source src="img/likken.webm" type="video/webm" />
 </video>
+
+<p>Binnenkort verkrijgbaar: iconische merch</p>
 
 <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d86fdfd3ac72074',m:'j_GMWgf984_j4zFGlK9c_Ki9RWViTomoSIZgBX5u._w-1644010142-0-AaanrBoxCCYwPkJLVg8sPUk3AAE3lDf0BISydvn9JhwG+uTUd9GAfRTW72J6b82VxYw+IULIkc36G8IqZ7rIiMxOYr7R8IET/kl3wUhg9A4vl3DhwB4zxivO+VOguW8HIJYzSMEinAtply4EfUspvnorfHl2QDLgFCLzuyir86HkzYcxM67ew8/Oqfq+MzRcDQ==',s:[0x7d2c2cbcbe,0x737d35e98b],}})();</script></body>
 

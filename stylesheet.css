@@ -20,6 +20,7 @@ video {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
+  max-width: 100%;
 }
 
 /* Links inside the navbar */
