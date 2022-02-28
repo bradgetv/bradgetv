@@ -2,4 +2,10 @@
 	background: white;
 	font-family: Consolas, monospace;
 	color: black;
+	width: auto;
+	padding: 1em;
+	max-width: 20em;
+}
+#factuur td {
+	padding-left: 2em;
 }
