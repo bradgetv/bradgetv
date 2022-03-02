@@ -1,0 +1,62 @@
+<div class="sidebar">
+	<a class="not-collapsible" href="/#"><img width="30px" src="/img/home.png"/>BRADGETV.NL</a>
+	<a class="not-collapsible" id="menu" href="#">Menu</a>
+	<a class="not-collapsible" href="https://t.me/s/LooijKartel"><img width="30px" src="https://telegram.org/img/t_logo.png"/>LooijKartel</a>
+	<a class="collapsible" href="#"><img width="30px" src="https://seeklogo.com/images/T/tiktok-app-icon-logo-0F5AD7AE01-seeklogo.com.png"/>TikTok</a>
+	<ul class="content">
+	  <li><a href="https://www.tiktok.com/@dokterslort" target="_blank">DokterSlort</a></li>
+      <li><a href="https://www.tiktok.com/@braddyzmemez_" target="_blank">BradgeMemez</a></li>
+      <li><a href="https://www.tiktok.com/@theBradge_" target="_blank">theBradge_</a></li>
+      <li><a href="https://www.tiktok.com/@vetjesmeneer" target="_blank">vetjesmeneer</a></li>
+	  <li><a href="https://www.tiktok.com/@alleenmaarpositiviteit" target="_blank">alleenmaarpositiviteit</a></li>  
+	</ul>
+	<a class="collapsible" href="#"><img width="30px" src="https://upload.wikimedia.org/wikipedia/commons/7/72/YouTube_social_white_square_%282017%29.svg"/>YouTube</a>
+	<ul class="content">
+      <li><a href="https://www.youtube.com/channel/UCRgUEQGTafd5EEPLabZY2XA/videos" target="_blank">Kutjoch</a></li>
+	  <li><a href="https://www.youtube.com/channel/UCFPn13htxLPHcOoWJBT0DvA/videos" target="_blank">Tim van Tarrel</a></li>
+	  <li><a href="https://www.youtube.com/channel/UCETsbWKxB1LDJtYsO7CzuGw/videos" target="_blank">Arie Legs</a></li>
+	  <li><a href="https://www.youtube.com/channel/UCpaA3bnv_3092bCdP5xjMxQ/videos" target="_blank">Camp VLNT</a></li>
+	  <li><a href="https://www.youtube.com/channel/UCxak45Cv4dwKbkmnEMHQibw/videos" target="_blank">Bradge Kartel</a></li>
+	  <li><a href="https://www.youtube.com/channel/UChJUWLmK8BgH0T2iFlvGpzg/videos" target="_blank">Mensa Member</a></li> 
+    </ul>	
+	<a class="collapsible"  href="#"><img width="30px" src="https://cdn2.downdetector.com/static/uploads/c/300/c9a18/Dumpert-applicatie-logo.png"/>Dumpert</a>
+    <ul class="content">
+      <li><a href="https://www.dumpert.nl/tag/bradge" target="_blank">Dumpert Bradge</a></li>
+      <li><a href="https://www.dumpert.nl/tag/bradgetv" target="_blank">Dumpert BradgeTV</a></li>
+    </ul>	
+	<a class="collapsible"  href="#"><img width="30px" src="https://roddelpraat.nl/rp-data/uploads/2021/02/cropped-Roddelpraat-logo.png"/>Roddelpraat</a>
+    <ul class="content">
+      <li><a href="https://roddelpraat.nl/dikzak-boos-op-dennis-vanwege-jachtseizoen/" target="_blank">Dikzak boos op Dennis</a></li>
+      <li><a href="https://roddelpraat.nl/the-bradge-blij-met-scheldpartij-roddelpraat/" target="_blank">Bradge blij</a></li>
+    </ul>
+	<a class="collapsible"  href="#">Meer Bradge</a>
+	<ul class="content">
+      <li><a href="fok">Fok forum</a></li>
+      <li><a href="https://www.google.com/search?hl=en&q=site%3Aqueenconcerts.com%20innuendo1990" target="_blank">Queenconcerts</a></li>
+      <li><a href="https://www.google.com/search?hl=en&q=site%3Aqueenconcerts.com%20bradjarre" target="_blank">Queenconcerts 2</a></li>
+      <li><a href="https://www.google.com/search?hl=en&q=site%3Aautoweek.nl%20bradgetv" target="_blank">Autoweek</a></li>
+    </ul>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+$('#menu').click(function(){
+	$(".collapsible").css('display','block');
+});
+
+</script>
