@@ -2,20 +2,30 @@
 .sidebar {
   margin: 0;
   padding: 0;
-  width: 200px;
+  width: auto;
   background-color: #f1f1f1;
   position: fixed;
-  height: 100%;
-  overflow: auto;
 }
 
 /* Sidebar links */
-.sidebar a {
+.collapsible {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  border: none;
+}
+
+.not-collapsible {
   display: block;
   color: black;
   padding: 16px;
   text-decoration: none;
 }
+
 
 /* Active/current link */
 .sidebar a.active {
@@ -36,19 +46,6 @@
   height: 1000px;
 }
 
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
   background-color: #ccc;
@@ -67,12 +64,21 @@ img {
 	padding-right: 1em;
 }
 
-/* #menu {
+#menu {
 	display:none;
-} */
+}
 
-/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 700px) {
+li {
+	list-style: none;
+	margin-bottom: 0.5em;
+}
+li a {
+	color: black;
+	text-decoration: none;
+}
+
+
+@media screen and (max-width: 800px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -80,9 +86,11 @@ img {
   }
   .sidebar a {float: left;}
   div.content {margin-left: 0;}
-}
+  
+  #menu {
+	display:none;
+	}
 
-@media screen and (max-width: 800px) {
   .sidebar a {
     float: none;
   }
