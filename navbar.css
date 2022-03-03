@@ -57,6 +57,8 @@
   display: none;
   overflow: hidden;
   background-color: #f1f1f1;
+  list-style: none;
+  margin-bottom: 0.5em;
 }
 
 img {
@@ -68,11 +70,7 @@ img {
 	display:none;
 }
 
-li {
-	list-style: none;
-	margin-bottom: 0.5em;
-}
-li a {
+.content a {
 	color: black;
 	text-decoration: none;
 }
