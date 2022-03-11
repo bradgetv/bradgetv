@@ -29,7 +29,9 @@ crossorigin=""></script>
 	padding: 1em;
 }
 #map { height: 300px; }
-
+#map img {
+    max-height: none;
+}
 </style>
 <body>
 
@@ -44,7 +46,7 @@ crossorigin=""></script>
 <div id="content">
 <h1>Waar is de Bradge?</h1>
 <div id="map"></div>
-
+<button id="button">Vorige locatie</button>
 <h2>Hoe werkt deze tracker?</h2>
 <p>Door middel van AI voorspelt deze tracker de meest waarschijnljke locatie, bijvoorbeeld bij Snackbar De Admiraal.</p>
 <h2>Maar dat is illegaal!!!</h2>
@@ -52,14 +54,30 @@ crossorigin=""></script>
 </div>
 
 <script type="text/javascript">
-	var map = L.map('map').setView([52.2108904,5.1571005], 13);
-	 L.tileLayer('https://tile.openstreetmap.org/${z}/${x}/${y}.png', {
-		 attribution:
-			 '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-		 maxZoom: 18
-	 }).addTo(map);
+	var bradgeIcon = L.icon({
+    iconUrl: 'ka.png',
 
-  var marker = L.marker([52.2108904,5.1571005]).addTo(map);
+    iconSize:     [70, 50], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+});
+
+	var braddieTrainen = L.icon({
+    iconUrl: 'braddie_trainen.png',
+
+    iconSize:     [100, 82], // size of the icon
+    iconAnchor:   [50, 40], // point of the icon which will correspond to marker's location
+});
+
+	var map = L.map('map').setView([52.2108904,5.1571005], 13);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+  var marker = L.marker([52.2108904,5.1571005], {icon: bradgeIcon}).addTo(map);
+
+
+document.getElementById('button').onclick = function addMarker() {    
+    marker = L.marker([52.1957634,5.1414109], {icon: braddieTrainen}).addTo(map); }
 
 </script>
 
