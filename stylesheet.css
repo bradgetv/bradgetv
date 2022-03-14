@@ -23,6 +23,15 @@ h1 {
 video { 
 	width: 100% !important;
 	}
+	
+button {
+	background-color: #3d82e9;
+	color: white;
+	text-decoration: bold;
+	padding: 1em;
+	border: none;
+	cursor: pointer;
+	}
 
 
 @media only screen and (max-width: 1400px) {
