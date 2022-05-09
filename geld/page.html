@@ -1,0 +1,81 @@
+<body>
+<script>
+var tb = document.getElementById('emp-salaries'),
+  dtotal = document.getElementById('display-total'),
+  tbody,
+  total = 0;
+
+function getResults() {
+  
+  total = 0;
+  
+  for (var i = 0; i < tb.children.length; i++) {
+    var el = tb.children[i];
+    console.log(tb.children[i]);
+    if (tb.children[i].tagName == 'TBODY') {
+      tbody = el;
+      break;
+    }
+  }//loop to go through table childrens
+
+  for (var j = 0; j < tbody.children.length; j++) {
+    var el = tbody.children[j];
+
+    for (var k = 0; k < el.children.length; k++) {
+      if (k == el.children.length-1) {
+        total += parseInt(el.children[k].innerText, 10); 
+      }
+    } //loop that generates the total
+  } //loop to find last cell of a row
+  
+  dtotal.innerText = total;
+} //getResults function
+</script>
+
+<table id="emp-salaries">
+  <thead>
+    <tr>
+      <td>S.No</td>
+      <td>Description</td>
+      <td>Salaries</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1.</td>
+      <td>Alex</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Bob</td>
+      <td>420</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Stuart</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>Gale</td>
+      <td>333</td>
+    </tr>
+    <tr>
+      <td>5.</td>
+      <td>Rob</td>
+      <td>240</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td></td>
+      <td>Total</td>
+      <td id="display-total">???</td>
+    </tr>
+  </tfoot>
+
+</table>
+
+<button onclick="getResults()">Calculate Total</button>
+</body>
