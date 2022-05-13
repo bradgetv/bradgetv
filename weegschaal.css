@@ -1,0 +1,71 @@
+.info{
+	z-index: 3;
+	height:200px;
+	text-align: center;
+}
+#weegschaal_container{
+	width:400px;
+	height:200px;
+	overflow: hidden;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	margin-left: 50%;
+	margin-right: 50%;
+	margin-top: 8em;
+	margin-bottom: -3em;
+}
+
+
+.gauge-a{
+	z-index: 1;
+	background-color: white;
+	width: 400px;
+	height: 200px;
+	top: 0%;
+	border-radius:250px 250px 0px 0px ;
+}
+.gauge-b{
+	z-index: 3;
+	position: absolute;
+	background-color: black;
+	width: 250px;
+	height: 125px;
+	top: 75px;
+	margin-left: 75px;
+	margin-right: auto;
+	border-radius:250px 250px 0px 0px ;
+}
+.gauge-c{
+	z-index: 2;
+	position: absolute;
+	background-color: #fb0a0a;
+	width: 400px;
+	height: 200px;
+	top: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius:0px 0px 200px 200px ;
+  transform-origin:center top;
+	transition: all 1.3s ease-in-out;
+}
+
+#weegschaal_container:hover .gauge-c{
+	transform:rotate(.45turn);
+}
+#weegschaal_container:hover .gauge-data{
+	color: red;
+}
+
+.gauge-data{
+	z-index: 4;
+	color: white;
+	font-size: 1.5em;
+	line-height: 25px;
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 1s ease-out;
+}

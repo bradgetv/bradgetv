@@ -12,6 +12,7 @@
 	<link rel="icon" href="img/braddieneckreveal.webp">
 	<link rel="stylesheet" href="stylesheet.css">
 	<link rel="stylesheet" href="navbar.css">
+	<link rel="stylesheet" href="weegschaal.css">
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <body>
@@ -44,28 +45,44 @@ Hier zal meer informatie komen over zijn nieuwe avonturen.</p>
 
 <script async src="https://telegram.org/js/telegram-widget.js?16" data-telegram-post="LooijKartel/2240" data-tme-mode data-width="100%"></script>
 						  
-<h2>De weegschaal </h2><img width="50px" style="vertical-align:middle" src="img/weegschaal.jpg"/>
-    <button type="button"
-        onclick="show()" id="btnID">
-        Weeg Braddie
-    </button>
- 
-    <script>
-        function show() {
- 
-            /* Access image by id and change
-            the display property to block*/
-            document.getElementById('gewicht')
-                    .style.display = "block";
- 
-            document.getElementById('btnID')
-                    .style.display = "none";
-        }
-    </script>
-    <div id="gewicht" style="display:none; background: #93AFAC; padding: 1em; max-width:50%">
-	  <p><b style="padding-top: 1em; font-family:monospace; font-size: 30px">>160 kg </br>19 zakken potgrond</b> <img src="img/potgrond.webp" style="max-width:2em"/></p>
-    </div>
-	
+<h2>De weegschaal </h2>
+	<script>
+	$(function(){
+		var val = 0
+		var decrease = 0 
+		var incraese = 0 
+
+		$('#weegschaal_container').hover(function(){
+		clearInterval(decrease)
+			increase = setInterval(function(){//hover on function
+				if (val<165){
+					val += 1
+					$('#gewicht').text(val+" kg")
+					$('#gewicht_convert').text(val/5+" zakken kattengrit")					
+				}//close if
+			},10)//close settimeout
+		},function(){
+		clearInterval(increase)
+			decrease = setInterval(function(){//hover on function
+				if (val>0){
+					val -= 1
+					$('#gewicht').text(val+" kg")		
+					$('#gewicht_convert').text(val/5+" zakken kattengrit")	
+				}//close if
+			},10)//close settimeout
+		}
+
+		)//close hover
+
+
+	})//close $(function)
+	</script>
+	<div id="weegschaal_container">
+	<div class="gauge-a"></div>
+	<div class="gauge-b"></div>
+	<div class="gauge-c"></div>
+	<div class="gauge-data"><p id="gewicht">0 kg</p><p id="gewicht_convert">0 zakken kattengrit</p></div>
+	</div>
 <h2>Wat heeft Bradge misdaan?</h2>
 <p>In onderstaande video legt Bradley zelf een selectie van zijn praktijken uit:<p>
 <iframe width="100%" height="450" src="https://www.youtube.com/embed/o4Xja3nSs7k?start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
