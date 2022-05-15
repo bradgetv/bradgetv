@@ -12,13 +12,14 @@ pio.renderers.default = "browser"
 data= pd.DataFrame()
 data = pd.read_csv('subs.csv')
 
-fig = px.line(data, x="Datum", y="Aantal subs")
+fig = px.line(data, x="Datum", y="Aantal subs",color_discrete_sequence=["#3d82e9"])
 
 fig.update_layout(
                xaxis_title='Datum',
                yaxis_title="Aantal subs",
-               plot_bgcolor='rgba(0,0,0,0)',
-               font_family="Arial",
+               paper_bgcolor='rgba(238,238,238,255)', # Sets bg to transparent
+               plot_bgcolor='rgba(255,255,255,50)',
+               font_family="Helvetica",
                font_color="black",
                )
 a = {'showline' : True,
