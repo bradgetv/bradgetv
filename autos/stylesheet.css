@@ -1,0 +1,19 @@
+#auto_lijst
+{
+    background-color: antiquewhite;
+    padding: 1em;
+    color: black;
+}
+
+#auto_lijst > li
+{
+    list-style: none;
+    border: 0.5em solid #333;
+    padding: 0.5em;
+}
+#auto_lijst img
+{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
