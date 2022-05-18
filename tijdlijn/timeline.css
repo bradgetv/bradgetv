@@ -11,10 +11,8 @@
 
 body {
   background: var(--background-color);
-  display: flex;
   justify-content: center;
 }
-
 /* Timeline Container */
 .timeline {
   margin: 20px auto;
