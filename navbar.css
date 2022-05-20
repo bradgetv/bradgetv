@@ -5,6 +5,7 @@
   width: auto;
   background-color: #f1f1f1;
   position: fixed;
+  border-radius: 1em;
 }
 
 /* Sidebar links */

@@ -11,6 +11,9 @@
 #content {
 	max-width: 800px;
 	margin: auto;
+	background: #4B4D52;
+	padding: 1em;
+	border-radius: 1em;
 }
 
 
