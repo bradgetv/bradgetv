@@ -58,10 +58,10 @@ Hier zal meer informatie komen over zijn nieuwe avonturen.</p>
 		$('#weegschaal_container').hover(function(){
 		clearInterval(decrease)
 			increase = setInterval(function(){//hover on function
-				if (val<165){
+				if (val<169){
 					val += 1
 					$('#gewicht').text(val+" kg")
-					$('#gewicht_convert').text(val/5+" zakken kattengrit")					
+					$('#gewicht_convert').text((val/860).toFixed(2)+" Daihatsu YRV")					
 				}//close if
 			},10)//close settimeout
 		},function(){
@@ -70,7 +70,7 @@ Hier zal meer informatie komen over zijn nieuwe avonturen.</p>
 				if (val>0){
 					val -= 1
 					$('#gewicht').text(val+" kg")		
-					$('#gewicht_convert').text(val/5+" zakken kattengrit")	
+					$('#gewicht_convert').text((val/860).toFixed(2)+" Daihatsu YRV")	
 				}//close if
 			},10)//close settimeout
 		}
@@ -84,7 +84,7 @@ Hier zal meer informatie komen over zijn nieuwe avonturen.</p>
 	<div class="gauge-a"></div>
 	<div class="gauge-b"></div>
 	<div class="gauge-c"></div>
-	<div class="gauge-data"><p id="gewicht">0 kg</p><p id="gewicht_convert">0 zakken kattengrit</p></div>
+	<div class="gauge-data"><p id="gewicht">0 kg</p><p id="gewicht_convert">0 Daihatsu YRV</p></div>
 	</div>
 <h2>Wat heeft Bradge misdaan?</h2>
 <p>In onderstaande video legt Bradley zelf een selectie van zijn praktijken uit:<p>
